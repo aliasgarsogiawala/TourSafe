@@ -1,6 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TourSafe
+
+TourSafe is a comprehensive travel safety application designed to protect tourists from scams and provide emergency assistance while traveling in unfamiliar locations.
+
+## Features
+
+- **Scam Area Tracking**: View real-time maps of reported scam hotspots to avoid dangerous areas
+- **Emergency SOS**: Quick access to emergency services with location sharing
+- **Cab Fare Estimation**: Calculate fair prices for taxi rides to avoid overcharging
+- **Scam Reporting System**: Community-driven platform to report and warn others about scams
+- **Secure Authentication**: User accounts protected with Clerk authentication
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Clerk Authentication
+- Leaflet Maps
+- Tailwind CSS
 
 ## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/TourSafe.git
+cd TourSafe
+```
 
 First, run the development server:
 
