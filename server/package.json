@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node index.js",
+    "build": "echo 'Build step completed'",
     "dev": "nodemon index.js"
   },
   "dependencies": {
