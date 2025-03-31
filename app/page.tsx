@@ -9,6 +9,8 @@ import SwiperCore from 'swiper';
 import { Autoplay } from 'swiper/modules';
 import CountUp from 'react-countup';
 import { useState, useEffect } from 'react';
+import SplashScreen from '@/components/SplashScreen';
+import { AnimatePresence } from 'framer-motion';
 
 // Dynamically import Swiper with SSR disabled
 const Swiper = dynamic(() => import('swiper/react').then(mod => mod.Swiper), { ssr: false });
@@ -19,13 +21,22 @@ SwiperCore.use([Autoplay]);
 
 export default function Home() {
   const [startCounter, setStartCounter] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
     setStartCounter(true); // Trigger counter animation when component loads
   }, []);
 
+  const handleSplashFinish = () => {
+    setShowSplash(false);
+  };
+
   return (
     <main className="flex flex-col items-center justify-between relative">
+      <AnimatePresence>
+        {showSplash && <SplashScreen onFinish={handleSplashFinish} />}
+      </AnimatePresence>
+
       {/* Hero Section with Background Image */}
       <section className="relative w-full h-[80vh] bg-cover bg-center" style={{ backgroundImage: `url('/assets/images/gate.png')` }}>
         
