@@ -8,17 +8,28 @@ const app = express();
 const server = http.createServer(app);
 
 // Enable CORS
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://tour-safe.vercel.app",
+    "https://tour-safe-qfg9nny3i-aliasgar-soglawalas-projects.vercel.app",
+    "http://localhost:3000"
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"]
+}));
 
 // Initialize Socket.io with proper CORS settings for production
 const io = new Server(server, {
   cors: {
     origin: [
       "https://tour-safe.vercel.app",
+      "https://tour-safe-qfg9nny3i-aliasgar-soglawalas-projects.vercel.app",
       "http://localhost:3000"
     ],
     methods: ["GET", "POST"],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ["my-custom-header"]
   }
 });
 
