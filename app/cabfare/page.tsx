@@ -19,14 +19,12 @@ const CabFare = () => {
   const [source, setSource] = useState("");
   const [destination, setDestination] = useState("");
   const [traffic, setTraffic] = useState("normal");
-  const [travelTime, setTravelTime] = useState(""); // Travel time input
+  const [travelTime, setTravelTime] = useState(""); 
   const [fare, setFare] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  // Your DistanceMatrix API key
-  const apiKey = "Hn35QAGQ2WpW1e5es6eD73fGNRkBZwyLWjDOSKuxWZvd1aBf3iPxtCozSwOrXXaG"; // Replace with your actual API key
+  const apiKey = process.env.API_KEY; 
 
-  // Function to fetch distance between source and destination
   const getDistance = async () => {
     try {
       const response = await fetch(
