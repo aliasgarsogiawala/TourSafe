@@ -46,6 +46,7 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="text-center mt-4 text-sm">
           © {new Date().getFullYear()} TourSafe. All rights reserved.
+          Built by Aliasgar Sogiawala
         </div>
       </div>
     </footer>
