@@ -21,12 +21,12 @@ const Sos = () => {
 
       {/* SOS Button */}
       <div className="flex justify-center mb-16">
-        <Link href="/SosConfirm">
+        <a href="tel:+919833523931">
           <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-2xl shadow-lg transition-all duration-300 flex items-center gap-3">
             <FiAlertCircle className="text-4xl" />
-            Send SOS Alert
+            Call SOS Alert
           </button>
-        </Link>
+        </a>
       </div>
 
       {/* Safety Tips Section */}
